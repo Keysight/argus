@@ -1,8 +1,8 @@
-.. image:: https://img.shields.io/pypi/v/pytest_argus.svg
-    :target: https://pypi.org/project/pytest_argus
+.. image:: https://img.shields.io/pypi/v/pytest-argus.svg
+    :target: https://pypi.org/project/pytest-argus
 
-.. image:: https://img.shields.io/pypi/pyversions/pytest_argus.svg
-    :target: https://pypi.org/project/pytest_argus
+.. image:: https://img.shields.io/pypi/pyversions/pytest-argus.svg
+    :target: https://pypi.org/project/pytest-argus
 
 .. image:: https://img.shields.io/badge/license-MIT-green.svg
     :target: https://en.wikipedia.org/wiki/MIT_License
@@ -15,11 +15,11 @@ pytest_argus is the Python plugin for pytest that colects results and stores the
 Installing
 ==========
 
-| The main branch always contains the latest official release. Official releases are posted to `PyPI <https://pypi.python.org/pypi/pytest_argus/>`_. 
+| The main branch always contains the latest official release. Official releases are posted to `PyPI <https://pypi.python.org/pypi/pytest-argus/>`_. 
 | The dev branch contains improvements and fixes of the current release that will go into the next release version.
 
 * To install the official release just run
-  ``pip install --upgrade pytest_argus``.
+  ``pip install --upgrade pytest-argus``.
 * To install the version in `github <https://github.com/keysight/argus/pytest-plugin>`_ use
   ``python setup.py develop`` for development install or
   ``python setup.py install``.
