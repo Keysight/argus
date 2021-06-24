@@ -1,0 +1,11 @@
+database:
+   host: 127.0.0.1
+   port: 3306
+   dbname: ARGUS
+   user: root
+   password: argus
+   client_encoding: utf-8
+   connect_timeout: 60
+   sslmode: none
+   test_type: sonic
+   
