@@ -6,8 +6,8 @@
  
  
 ## sql server
-preferably use mysql 8.0+, if not posible mariadb will also work. (other sql implementations may work as well but were not tested)<br>
-for ease of use the examples here will use mysql docker container (a vm or baremetal deployment can be used as well)
+preferably use mysql 8.0+, if not possible mariadb will also work. (other sql implementations may work as well but were not tested)<br>
+for ease of use the examples here will use mysql docker container (a vm or bare metal deployment can be used as well)
 
 
 https://hub.docker.com/r/mysql/mysql-server
@@ -37,7 +37,7 @@ mysql/mysql-server
 docker ps
 ```
 
-### must be done once to alow access from remote machines if needed.
+### must be done once to allow access from remote machines if needed.
 ```
 docker exec -it mysql-argus mysql -u root -p
 
@@ -53,7 +53,7 @@ docker clone https://github.com/Keysight/argus.git
 docker exec -i mysql-argus sh -c 'exec mysql -uroot -p"argus"' < ./argus/db/schema.sql
 ```
 
-### stop the container without corupting data
+### stop the container without corrupting the data
 ```
 docker exec mysql-argus /usr/bin/mysqladmin -u root -p"argus" shutdown
 docker container logs mysql-argus
