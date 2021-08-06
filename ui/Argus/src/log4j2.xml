@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="TRACE">
+	<Appenders>
+		<File name="file" fileName="/var/log/argus-ui.log">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.argus" level="TRACE" />
+		<Root level="TRACE">
+			<AppenderRef ref="file" />
+		</Root>
+	</Loggers>
+</Configuration>

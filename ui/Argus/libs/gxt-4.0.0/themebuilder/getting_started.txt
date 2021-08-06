@@ -1,0 +1,6 @@
+The Sencha GXT Theme Builder is a tool designed to take a set of theme
+properties and output a JAR file with the necessary GWT module, classes, css,
+and images to give your app that look and feel. For more information, please
+see the Theme Builder documentation at:
+
+http://docs.sencha.com/gxt/4.x/concepts/ThemeBuilder.html

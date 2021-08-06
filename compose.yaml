@@ -1,0 +1,31 @@
+# Use root/example as user/password credentials
+version: '3.8'
+
+services:
+
+  db:
+    image: mysql:8
+    restart: always
+    volumes:
+      - ./db/data:/var/lib/mysql
+      - ./db/conf.d/server.cnf:/etc/mysql/conf.d/server.cnf
+      - ./db/schema.sql:/root/schema.sql
+      - ./db/demo_data.sql:/root/demo_data.sql
+    network_mode: host
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: argus
+
+  ui:
+    image: tomcat:9
+    restart: always
+    volumes:
+      - ./ui/release/0.0.25/Argus.war:/usr/local/tomcat/webapps/Argus.war
+      - ./ui/log/argus-ui.log:/var/log/argus-ui.log
+    network_mode: host
+    depends_on: 
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: argus
+      MYSQL_CONTAINER_IP: 127.0.0.1
+

@@ -1,0 +1,11 @@
+/.metadata/
+!/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs
+
+Argus/.gwt
+Argus/.settings/
+Argus/gwt-unitCache/
+Argus/war/argus/
+Argus/war/WEB-INF/deploy/
+Argus/war/WEB-INF/classes/
+/Argus/.gradle/
+/Argus/build/

@@ -1,0 +1,121 @@
+<!--
+
+    Sencha GXT 4.0.0 - Sencha for GWT
+    Copyright (c) 2006-2015, Sencha Inc.
+
+    licensing@sencha.com
+    http://www.sencha.com/products/gxt/license/
+
+    ================================================================================
+    Open Source License
+    ================================================================================
+    This version of Sencha GXT is licensed under the terms of the Open Source GPL v3
+    license. You may use this license only if you are prepared to distribute and
+    share the source code of your application under the GPL v3 license:
+    http://www.gnu.org/licenses/gpl.html
+
+    If you are NOT prepared to distribute and share the source code of your
+    application under the GPL v3 license, other commercial and oem licenses
+    are available for an alternate download of Sencha GXT.
+
+    Please see the Sencha GXT Licensing page at:
+    http://www.sencha.com/products/gxt/license/
+
+    For clarification or additional options, please contact:
+    licensing@sencha.com
+    ================================================================================
+
+
+    ================================================================================
+    Disclaimer
+    ================================================================================
+    THIS SOFTWARE IS DISTRIBUTED "AS-IS" WITHOUT ANY WARRANTIES, CONDITIONS AND
+    REPRESENTATIONS WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+    IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY,
+    FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, NON-INFRINGEMENT, PERFORMANCE AND
+    THOSE ARISING BY STATUTE OR FROM CUSTOM OR USAGE OF TRADE OR COURSE OF DEALING.
+    ================================================================================
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+    xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+    xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button">
+
+  <ui:with type="com.sencha.gxt.core.client.util.Margins" field="spacerMargin">
+    <ui:attributes top="20" right="0" bottom="0" left="0" />
+  </ui:with>
+
+  <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="spacerLayout">
+    <ui:attributes width="1" height="-1" margins="{spacerMargin}" />
+  </ui:with>
+
+  <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="topLayout">
+    <ui:attributes width="1" height="0.33333" />
+  </ui:with>
+
+  <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="middleLayout">
+    <ui:attributes width="1" height="0.33333" />
+  </ui:with>
+
+  <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="bottomLayout">
+    <ui:attributes width="1" height="0.33333" />
+  </ui:with>
+
+  <container:VerticalLayoutContainer>
+    <container:child layoutData="{topLayout}">
+      <gxt:ContentPanel heading="Button Aligning — START" buttonAlign="START">
+        <gxt:button>
+          <button:TextButton text="Button 1" ui:field="button1s" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 2" ui:field="button2s" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 3" ui:field="button3s" />
+        </gxt:button>
+      </gxt:ContentPanel>
+    </container:child>
+
+    <container:child layoutData="{spacerLayout}">
+      <g:HTML />
+    </container:child>
+
+    <container:child layoutData="{middleLayout}">
+      <gxt:ContentPanel heading="Button Aligning — CENTER" buttonAlign="CENTER">
+        <gxt:button>
+          <button:TextButton text="Button 1" ui:field="button1c" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 2" ui:field="button2c" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 3" ui:field="button3c" />
+        </gxt:button>
+      </gxt:ContentPanel>
+    </container:child>
+
+    <container:child layoutData="{spacerLayout}">
+      <g:HTML />
+    </container:child>
+
+    <container:child layoutData="{bottomLayout}">
+      <gxt:ContentPanel heading="Button Aligning — END" buttonAlign="END">
+        <gxt:button>
+          <button:TextButton text="Button 1" ui:field="button1e" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 2" ui:field="button2e" />
+        </gxt:button>
+        <gxt:button>
+          <button:TextButton text="Button 3" ui:field="button3e" />
+        </gxt:button>
+      </gxt:ContentPanel>
+    </container:child>
+
+  </container:VerticalLayoutContainer>
+
+</ui:UiBinder>

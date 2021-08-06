@@ -5,8 +5,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema ARGUS
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `ARGUS` ;
-
 CREATE SCHEMA IF NOT EXISTS `ARGUS` DEFAULT CHARACTER SET latin1 ;
 USE `ARGUS` ;
 
@@ -54,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `ARGUS`.`b_tests` (
     `run_key` INT(11) NOT NULL,
     `test_location` VARCHAR(500) NOT NULL,
     `test_name` VARCHAR(150) NOT NULL,
-    `test_result` CHAR(5) NOT NULL,
+    `test_result` CHAR(4) NOT NULL,
     `test_log` LONGTEXT NOT NULL,
     `test_error` VARCHAR(1000) NOT NULL,
     `test_start_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,

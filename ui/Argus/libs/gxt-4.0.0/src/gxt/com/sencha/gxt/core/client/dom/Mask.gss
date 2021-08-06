@@ -1,0 +1,104 @@
+/**
+ * Sencha GXT 4.0.0 - Sencha for GWT
+ * Copyright (c) 2006-2015, Sencha Inc.
+ *
+ * licensing@sencha.com
+ * http://www.sencha.com/products/gxt/license/
+ *
+ * ================================================================================
+ * Open Source License
+ * ================================================================================
+ * This version of Sencha GXT is licensed under the terms of the Open Source GPL v3
+ * license. You may use this license only if you are prepared to distribute and
+ * share the source code of your application under the GPL v3 license:
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * If you are NOT prepared to distribute and share the source code of your
+ * application under the GPL v3 license, other commercial and oem licenses
+ * are available for an alternate download of Sencha GXT.
+ *
+ * Please see the Sencha GXT Licensing page at:
+ * http://www.sencha.com/products/gxt/license/
+ *
+ * For clarification or additional options, please contact:
+ * licensing@sencha.com
+ * ================================================================================
+ *
+ *
+ * ================================================================================
+ * Disclaimer
+ * ================================================================================
+ * THIS SOFTWARE IS DISTRIBUTED "AS-IS" WITHOUT ANY WARRANTIES, CONDITIONS AND
+ * REPRESENTATIONS WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+ * IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, NON-INFRINGEMENT, PERFORMANCE AND
+ * THOSE ARISING BY STATUTE OR FROM CUSTOM OR USAGE OF TRADE OR COURSE OF DEALING.
+ * ================================================================================
+ */
+
+.mask {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+  position: absolute;
+}
+
+@if (is("user.agent", "ie8")) {
+  .mask {
+    filter: alpha(opacity = 50);
+  }
+}
+@else  {
+  .mask {
+    opacity: 0.5;
+  }
+}
+
+.mask {
+  background-color: #ccc;
+}
+
+.box {
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid;
+  padding: 2px;
+}
+
+.box {
+  gwt-sprite: "boxBackground";
+  border-color: #6593cf;
+  background-color: #c3daf9;
+}
+
+.text {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid;
+  cursor: wait;
+}
+
+.text {
+  background-color: white;
+  border-color: #a3bad9;
+  color: #222;
+  font: normal 11px tahoma, arial, helvetica, sans-serif;
+}
+
+.positioned {
+  position: relative !important;
+}
+
+.masked {
+  overflow: hidden !important;
+}
+
+.masked select, 
+.masked object, 
+.masked embed {
+  visibility: hidden;
+}

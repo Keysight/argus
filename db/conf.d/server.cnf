@@ -1,0 +1,86 @@
+# this is only for the mysqld standalone daemon
+[mysqld]
+bind-address=0.0.0.0
+port		= 3306
+socket		= /run/mysqld/mysqld.sock
+skip-external-locking
+key_buffer_size = 16M
+max-allowed-packet=1000M
+
+slow-query-log = ON
+log-queries-not-using-indexes=1
+long-query-time=1
+slow-query-log-file=/var/log/mysql-lq.log
+
+max-connections = 2000
+
+default-time-zone = '-08:00'
+
+table_open_cache = 64
+sort_buffer_size = 512K
+net_buffer_length = 8K
+read_buffer_size = 256K
+read_rnd_buffer_size = 512K
+myisam_sort_buffer_size = 8M
+
+# Replication Master Server (default)
+# binary logging is required for replication
+log-bin=mysql-bin
+sync_binlog=1
+
+# binary logging format - mixed recommended
+binlog_format=STATEMENT
+
+
+
+# Uncomment the following if you are using InnoDB tables
+#innodb_data_home_dir = /var/lib/mysql
+#innodb_data_file_path = ibdata1:10M:autoextend
+#innodb_log_group_home_dir = /var/lib/mysql
+# You can set .._buffer_pool_size up to 50 - 80 %
+# of RAM but beware of setting memory usage too high
+innodb-buffer-pool-size=32G
+#innodb_additional_mem_pool_size = 2M
+# Set .._log_file_size to 25 % of buffer pool size
+innodb-log-file-size = 1G
+innodb-file-per-table = 1
+#innodb_log_buffer_size = 8M
+innodb_flush_log_at_trx_commit = 1
+#innodb_lock_wait_timeout = 50
+innodb-flush-method=O_DIRECT
+innodb_print_all_deadlocks=1
+
+
+# Recommended in standard MySQL setup
+sql-mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES 
+
+sort-buffer-size = 100M
+read-rnd-buffer-size = 100M
+
+max-heap-table-size = 200M
+tmp-table-size = 200M
+
+table-open-cache = 10000
+
+open-files-limit = 10000
+
+thread-cache-size = 100
+
+key-buffer-size = 100M
+
+auto-increment-increment = 100
+
+# required unique id between 1 and 2^32 - 1
+# defaults to 1 if master-host is not set
+# but will not function as a master if omitted
+#server-id	= 1
+
+# delete this and select one from below
+report-host=RENAME-argus
+auto-increment-offset = 99
+server-id=1365000099
+
+# in a multi master environment the design allows up to 100 regression servers
+# each shoudl have it's own id 
+# a diferent auto-increment-offset is required for ability to merge the data from all 100 servers without key/id conflict
+

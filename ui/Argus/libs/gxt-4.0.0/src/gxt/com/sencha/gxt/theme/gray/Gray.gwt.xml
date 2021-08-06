@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Sencha GXT 4.0.0 - Sencha for GWT
+    Copyright (c) 2006-2015, Sencha Inc.
+
+    licensing@sencha.com
+    http://www.sencha.com/products/gxt/license/
+
+    ================================================================================
+    Open Source License
+    ================================================================================
+    This version of Sencha GXT is licensed under the terms of the Open Source GPL v3
+    license. You may use this license only if you are prepared to distribute and
+    share the source code of your application under the GPL v3 license:
+    http://www.gnu.org/licenses/gpl.html
+
+    If you are NOT prepared to distribute and share the source code of your
+    application under the GPL v3 license, other commercial and oem licenses
+    are available for an alternate download of Sencha GXT.
+
+    Please see the Sencha GXT Licensing page at:
+    http://www.sencha.com/products/gxt/license/
+
+    For clarification or additional options, please contact:
+    licensing@sencha.com
+    ================================================================================
+
+
+    ================================================================================
+    Disclaimer
+    ================================================================================
+    THIS SOFTWARE IS DISTRIBUTED "AS-IS" WITHOUT ANY WARRANTIES, CONDITIONS AND
+    REPRESENTATIONS WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+    IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY,
+    FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, NON-INFRINGEMENT, PERFORMANCE AND
+    THOSE ARISING BY STATUTE OR FROM CUSTOM OR USAGE OF TRADE OR COURSE OF DEALING.
+    ================================================================================
+
+-->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
+    "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<module>
+  <inherits name="com.sencha.gxt.theme.base.Base" />
+
+  <extend-property name="gxt.theme" values="gray" />
+  <set-property name="gxt.theme" value="gray" />
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.GrayThemeAppearance">
+    <when-type-is class="com.sencha.gxt.core.client.resources.ThemeStyles.ThemeAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Buttons -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.button.GrayButtonGroupAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.button.ButtonGroup.ButtonGroupAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.grid.GrayGridAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.GridView.GridAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.toolbar.GrayToolBarButtonAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.ToolBarButton.ToolBarButtonAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.progress.GrayProgressBarAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.ProgressBarCell.ProgressBarAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.panel.GrayContentPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ContentPanel.ContentPanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.window.GrayWindowAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Window.WindowAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.panel.GrayAccordionLayoutAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.AccordionLayoutContainer.AccordionLayoutAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Menu Bar -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayMenuBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBar.MenuBarAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayMenuBarItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBarItem.MenuBarItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.widget.GrayDatePickerAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.DatePicker.DatePickerAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.field.GrayFieldSetAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.FieldSet.FieldSetAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.tree.GrayTreeAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.tree.Tree.TreeAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.panel.GrayContentPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ContentPanel.ContentPanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.panel.GrayFramedPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.FramedPanel.FramedPanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.panel.GrayPanelHeaderAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ContentPanel.PanelHeaderAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.toolbar.GrayToolBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.ToolBar.ToolBarAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.toolbar.GraySeparatorToolItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.SeparatorToolItem.SeparatorToolItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.tools.GrayTools">
+    <when-type-is class="com.sencha.gxt.widget.core.client.button.Tools" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Menu -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayMenuAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.Menu.MenuAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.Item.ItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuItem.MenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayHeaderMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.HeaderMenuItem.HeaderMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GraySeparatorMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.SeparatorMenuItem.SeparatorMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.menu.GrayCheckMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.CheckMenuItem.CheckMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Status -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.status.GrayBoxStatusAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Status.BoxStatusAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Tab Panel -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.tabs.GrayTabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.tabs.GrayTabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelBottomAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.tabs.GrayPlainTabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.tabs.GrayPlainTabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelBottomAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Color Palette -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.colorpalette.GrayColorPaletteAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ColorPaletteCell.ColorPaletteAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Slider -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.slider.GraySliderHorizontalAppearance">
+    <any>
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.SliderAppearance" />
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.HorizontalSliderAppearance" />
+    </any>
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.gray.client.slider.GraySliderVerticalAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.VerticalSliderAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.gray.client.container.GrayBorderLayoutAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.base.client.widget.GrayCollapsePanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.CollapsePanel.CollapsePanelAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Resizable -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.resizable.GrayResizableAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Resizable.ResizableAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Status proxy -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.statusproxy.GrayStatusProxyAppearance">
+    <when-type-is class="com.sencha.gxt.dnd.core.client.StatusProxy.StatusProxyAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+  <!-- Paging tool bar -->
+  <replace-with class="com.sencha.gxt.theme.gray.client.toolbar.GrayPagingToolBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.PagingToolBar.PagingToolBarAppearance" />
+    <when-property-is name="gxt.theme" value="gray" />
+  </replace-with>
+
+</module>

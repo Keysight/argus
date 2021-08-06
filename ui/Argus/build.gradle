@@ -1,0 +1,133 @@
+plugins {
+  id "org.wisepersist.gwt" version "1.1.10"
+  id "com.bmuschko.tomcat" version "2.5"
+}
+
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'gwt'
+apply plugin: 'eclipse'
+apply plugin: 'com.bmuschko.tomcat'
+
+//Java version compatibility to use when compiling Java source.
+sourceCompatibility = 1.8
+//Java version to generate classes for.
+targetCompatibility = 1.8
+//Script Version
+version = '1.0'
+
+// central repository to load the GWT library
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation  files('libs/gxt-4.0.0/gxt.jar')
+    implementation  files('libs/gxt-4.0.0/gxt-chart.jar')
+    implementation  files('libs/mysql-connector-java-8.0.26/mysql-connector-java-8.0.26.jar')
+    implementation  files('libs/oracle-jdbc/ojdbc7.jar')
+    implementation  files('libs/apache-log4j-2.14.1/log4j-api-2.14.1.jar')
+    implementation  files('libs/apache-log4j-2.14.1/log4j-core-2.14.1.jar')
+    implementation  files('libs/apache-log4j-2.14.1/log4j-iostreams-2.14.1.jar')
+    implementation  files('libs/apache-log4j-2.14.1/log4j-web-2.14.1.jar')
+    implementation  files('libs/slf4j-1.7.9/slf4j-api-1.7.9.jar')
+    implementation  files('libs/jackson-core-2.9.9/jackson-core-2.9.9.jar')
+    implementation  files('libs/poi-5.0.0/poi-5.0.0.jar')
+    implementation  files('libs/poi-5.0.0/poi-ooxml-5.0.0.jar')
+}
+
+compileJava{
+    //enable incremental compilation
+    options.incremental = true
+}
+
+gwt {
+    gwtVersion='2.8.2'
+    modules 'com.argus.Argus'
+    
+    compiler {
+        strict = true;
+        //enableClosureCompiler = true; // activates -XenableClosureCompiler
+        disableClassMetadata = true; // activates -XdisableClassMetadata
+        disableCastChecking = true; // activates -XdisableCastChecking
+        /** Script output style. (OBF, PRETTY, DETAILED)*/
+		style = "DETAILED"
+    }
+    
+    sourceSets {
+        main {
+            java {
+                srcDir 'src'
+            }
+        }
+    }
+    
+    /** The level of logging detail (ERROR, WARN, INFO, TRACE, DEBUG, SPAM, ALL) */
+    logLevel = 'ERROR'
+        
+    minHeapSize = "512M";
+    maxHeapSize = "1024M";
+    
+    superDev {
+        noPrecompile=true
+    }
+    
+    // The following is only needed if you don't use the Google Plugin for Eclipse.
+    eclipse{
+        addGwtContainer=false // Default set to true
+    }
+    
+    //Specify the deployment Port
+    tomcatRunWar.httpPort = 8080
+}
+
+tomcat {
+    httpPort = 8090
+    httpsPort = 8091
+    enableSSL = true
+    contextPath = 'argus'
+
+    users {
+        user {
+            username = 'root'
+            password = 'argus'
+            roles = ['developers', 'admi-uin']
+        }
+
+        user {
+            username = 'root'
+            password = 'argus'
+            roles = ['manager-ui']
+        }
+    }
+}
+
+//war {
+//    rootSpec.exclude("**/arachno/client/**")
+//    rootSpec.exclude("**/com/sencha/gxt/data/client/***")
+//    rootSpec.exclude("**/com/sencha/gxt/desktop/client/**")
+//    rootSpec.exclude("**/edu/ycp/cs/dh/acegwt/client/**")
+//}
+
+war {
+	archiveFileName = "Argus.war"
+	reproducibleFileOrder = true
+	webAppDirName = "war"
+	
+	//exclude = "**/gwt-unitCache/**"
+	exclude("war/argus/**")
+	exclude("war/WEB-INF/classes/**")
+	exclude("war/WEB-INF/deploy/**")
+	exclude("war/WEB-INF/lib/**")
+	
+}
+
+
+//task tomcatDraftWar(type: tomcatRunWar) {
+//    dependsOn draftWar
+//    dependsOn.remove('war')
+//    webApp=draftWar.archivePath
+//}

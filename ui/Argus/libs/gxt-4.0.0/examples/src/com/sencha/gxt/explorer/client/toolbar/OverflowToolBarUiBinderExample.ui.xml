@@ -1,0 +1,121 @@
+<!--
+
+    Sencha GXT 4.0.0 - Sencha for GWT
+    Copyright (c) 2006-2015, Sencha Inc.
+
+    licensing@sencha.com
+    http://www.sencha.com/products/gxt/license/
+
+    ================================================================================
+    Open Source License
+    ================================================================================
+    This version of Sencha GXT is licensed under the terms of the Open Source GPL v3
+    license. You may use this license only if you are prepared to distribute and
+    share the source code of your application under the GPL v3 license:
+    http://www.gnu.org/licenses/gpl.html
+
+    If you are NOT prepared to distribute and share the source code of your
+    application under the GPL v3 license, other commercial and oem licenses
+    are available for an alternate download of Sencha GXT.
+
+    Please see the Sencha GXT Licensing page at:
+    http://www.sencha.com/products/gxt/license/
+
+    For clarification or additional options, please contact:
+    licensing@sencha.com
+    ================================================================================
+
+
+    ================================================================================
+    Disclaimer
+    ================================================================================
+    THIS SOFTWARE IS DISTRIBUTED "AS-IS" WITHOUT ANY WARRANTIES, CONDITIONS AND
+    REPRESENTATIONS WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+    IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY,
+    FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, NON-INFRINGEMENT, PERFORMANCE AND
+    THOSE ARISING BY STATUTE OR FROM CUSTOM OR USAGE OF TRADE OR COURSE OF DEALING.
+    ================================================================================
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder 
+    xmlns:ui='urn:ui:com.google.gwt.uibinder' 
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:c="urn:import:com.sencha.gxt.widget.core.client"
+    xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button" 
+    xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+    xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar">
+
+  <ui:with type="com.sencha.gxt.examples.resources.client.images.ExampleImages" field="images" />
+
+  <c:Window ui:field="window" heading="Overflow Tool Bar" width="250" minWidth="50" buttonAlign="CENTER"
+      draggable="false">
+
+    <container:NorthSouthContainer>
+      <container:north>
+        <toolbar:ToolBar>
+          <button:ButtonGroup heading="Clipboard">
+            <g:Grid>
+              <g:row>
+                <g:customCell>
+                  <button:TextButton text="Cool" icon="{images.add16}" />
+                </g:customCell>
+                <g:customCell>
+                  <button:TextButton text="Copy" icon="{images.add16}" />
+                </g:customCell>
+              </g:row>
+              <g:row>
+                <g:customCell>
+                  <button:TextButton text="Add" icon="{images.user_add}" />
+                </g:customCell>
+                <g:customCell>
+                  <button:TextButton text="Delete" icon="{images.user_delete}" />
+                </g:customCell>
+              </g:row>
+            </g:Grid>
+          </button:ButtonGroup>
+
+          <toolbar:FillToolItem />
+
+          <button:ButtonGroup heading="Other Bogus Actions">
+            <g:Grid>
+              <g:row>
+                <g:customCell>
+                  <button:TextButton text="Cool" icon="{images.add16}" />
+                </g:customCell>
+                <g:customCell>
+                  <button:TextButton text="Copy" icon="{images.add16}" />
+                </g:customCell>
+              </g:row>
+              <g:row>
+                <g:customCell>
+                  <button:TextButton text="Add" icon="{images.user_add}" />
+                </g:customCell>
+                <g:customCell>
+                  <button:TextButton text="Delete" icon="{images.user_delete}" />
+                </g:customCell>
+              </g:row>
+            </g:Grid>
+          </button:ButtonGroup>
+        </toolbar:ToolBar>
+      </container:north>
+    </container:NorthSouthContainer>
+
+    <c:button>
+      <button:TextButton text="Save" />
+    </c:button>
+    <c:button>
+      <button:TextButton text="Cancel" />
+    </c:button>
+    <c:button>
+      <button:TextButton text="Close" />
+    </c:button>
+    <c:button>
+      <button:TextButton text="Highlight" />
+    </c:button>
+    <c:button>
+      <button:TextButton text="Shutdown" />
+    </c:button>
+  </c:Window>
+
+</ui:UiBinder>

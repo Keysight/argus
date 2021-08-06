@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  When updating your version of GWT, you should also update this DTD reference,
+  so that your app can take advantage of the latest GWT module capabilities.
+-->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.8.1//EN"
+  "http://www.gwtproject.org/doctype/2.8.2/gwt-module.dtd">
+<module rename-to='argus'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+	<!-- Other module inherits -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	<inherits name='com.sencha.gxt.desktop.Desktop' />
+
+	<!-- AceGWT -->
+	<inherits name='edu.ycp.cs.dh.acegwt.AceGWT' />
+
+	<!-- GXT Theme -->
+	<inherits name="com.sencha.gxt.theme.blue.Blue" />
+	
+	<set-property name="gxt.theme" value="blue" />
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.argus.client.Argus'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+  
+  	<!-- DO NOT EVER ENABLE IN PRODUCTION -->
+	
+	<!-- allow Super Dev Mode -->
+	<add-linker name="xsiframe" />
+
+	<!-- compiles only one permutation -->
+	<collapse-all-properties />
+  
+  
+</module>

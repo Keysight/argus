@@ -1,0 +1,105 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+
+body {
+	margin: 0px !important;
+}
+
+
+.argus-login-window-body {
+	background-image: url(./images/window-background.jpg) !important;
+}
+
+.argus-login-window {
+	background-image: url(./images/blue_line_background.jpg) !important;
+}
+
+.argus-login-user-name-label {
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 18pt;
+    left: 20px !important;
+    top: 150px !important;
+}
+
+.argus-add-user-button {
+    left: 260px !important;
+    top: 240px !important;
+}
+
+.argus-login-grid-label {
+	padding-top: 5px;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 36pt;
+}
+
+.argus-login-grid {
+	padding-top: 0px;
+	font-weight: bold !important;
+	color: #000000;
+	font-size: 16pt !important;
+}
+
+.argus-login-filter {
+	background-position: 0 0;
+	background-repeat: no-repeat no-repeat;
+	border-bottom-color: #B5B8C8;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	font-size: 10pt;
+	overflow: hidden;
+	width: 17px;
+}
+
+.argus-code-and-log-fonts {
+	/*font-family: Inconsolata, Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace !important;*/
+	font: 12px Inconsolata, monospace !important;
+}
+
+.x-desktop {
+	background-color: #3D71B8;
+	/* background-image:url(./images/desktop.jpg);*/
+	background-image: url(./images/blue_line_background.jpg);
+	background-position: 0 0;
+	background-repeat: no-repeat no-repeat;
+}
+
+.x-taskbar {
+	background-image: url(./images/taskbuttons-panel-bg.gif) !important;
+	background-position: initial initial !important;
+	background-repeat: repeat no-repeat !important;
+}
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+img,body,html {
+	border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+q::before,q::after {
+	content: '';
+}
